@@ -1,0 +1,483 @@
+/* ===============================
+   1. RESET
+   =============================== */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ===============================
+   2. COLORS
+   =============================== */
+
+:root {
+  --orange: #ff7d1a;
+  --dark: #1d2025;
+  --text: #68707d;
+  --light: #f7f8fd;
+  --line: #e4e9f2;
+}
+
+
+/* ===============================
+   3. BODY
+   =============================== */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark);
+  background: rgb(213, 212, 216);
+  min-height: 100vh;
+}
+
+
+/* ===============================
+   4. HEADER
+   =============================== */
+
+.header {
+  width: min(1200px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  height: 120px;
+
+  border-bottom: 1px solid var(--line);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 55px;
+}
+
+
+/* Logo */
+
+.logo {
+  color: var(--dark);
+
+  text-decoration: none;
+
+  font-size: 31px;
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+}
+
+
+/* Navigation */
+
+.nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+
+  flex: 1;
+}
+
+
+.nav a {
+  color: #68707d;
+
+  text-decoration: none;
+
+  font-size: 15px;
+}
+
+
+.nav a:hover {
+  color: var(--orange);
+}
+
+
+/* Header right side */
+
+.header-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+}
+
+
+/* Cart button */
+
+.cart-icon {
+  position: relative;
+
+  border: 0;
+
+  background: transparent;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+
+/* Cart number */
+
+.cart-count {
+  position: absolute;
+
+  top: -10px;
+
+  right: -12px;
+
+  min-width: 19px;
+
+  height: 19px;
+
+  padding: 2px 5px;
+
+  border-radius: 20px;
+
+  background: var(--orange);
+
+  color: white;
+
+  font-size: 11px;
+
+  display: none;
+}
+
+
+/* Profile image */
+
+.avatar {
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+
+/* ===============================
+   5. MAIN PRODUCT LAYOUT
+   =============================== */
+
+.product-page {
+  width: min(1080px, calc(100% - 40px));
+
+  margin: 95px auto 60px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 125px;
+
+  align-items: center;
+}
+
+
+/* ===============================
+   6. MAIN PRODUCT IMAGE
+   =============================== */
+
+.main-image-box {
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  background: #f5f5f5;
+}
+
+
+.main-image-box img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+/* ===============================
+   7. THUMBNAIL IMAGES
+   =============================== */
+
+.thumbnails {
+  display: flex;
+
+  gap: 25px;
+
+  margin-top: 28px;
+}
+
+
+.thumb {
+  width: 100px;
+
+  height: 100px;
+
+  border: 2px solid transparent;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  background: white;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+
+.thumb img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+.thumb.active {
+  border-color: var(--orange);
+
+  opacity: 0.8;
+}
+
+
+/* ===============================
+   8. PRODUCT INFORMATION
+   =============================== */
+
+.company {
+  color: #68707d;
+
+  font-size: 13px;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 25px;
+}
+
+
+.product-info h1 {
+  font-size: clamp(34px, 4vw, 52px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1px;
+
+  margin-bottom: 40px;
+}
+
+
+.description {
+  max-width: 480px;
+
+  color: var(--text);
+
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  margin-bottom: 22px;
+}
+
+
+/* ===============================
+   9. PRICE
+   =============================== */
+
+.price-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+
+.price {
+  font-size: 30px;
+
+  font-weight: 800;
+}
+
+
+.discount {
+  background: var(--dark);
+
+  color: white;
+
+  padding: 5px 9px;
+
+  border-radius: 5px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+.old-price {
+  color: var(--text);
+
+  text-decoration: line-through;
+
+  font-weight: 700;
+
+  margin-top: 12px;
+
+  margin-bottom: 38px;
+}
+
+
+/* ===============================
+   10. QUANTITY SECTION
+   =============================== */
+
+.purchase-area {
+  display: flex;
+
+  gap: 18px;
+}
+
+
+.quantity-box {
+  width: 180px;
+
+  height: 58px;
+
+  background: var(--light);
+
+  border-radius: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-around;
+}
+
+
+.quantity-box button {
+  border: 0;
+
+  background: transparent;
+
+  color: var(--orange);
+
+  font-size: 27px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+#quantity {
+  font-weight: 700;
+}
+
+
+/* ===============================
+   11. ADD TO CART BUTTON
+   =============================== */
+
+.add-cart-btn {
+  flex: 1;
+
+  min-height: 58px;
+
+  border: 0;
+
+  border-radius: 10px;
+
+  background: var(--orange);
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 14px 25px rgba(255, 125, 26, 0.25);
+}
+
+
+.add-cart-btn:hover {
+  filter: brightness(1.05);
+
+  transform: translateY(-1px);
+}
+
+
+/* Message */
+
+.message {
+  margin-top: 18px;
+
+  color: #2d8a4b;
+
+  font-weight: 600;
+}
+
+
+/* ===============================
+   12. TABLET DESIGN
+   =============================== */
+
+@media (max-width: 900px) {
+
+  .product-page {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+
+    margin-top: 50px;
+  }
+
+}
+
+
+/* ===============================
+   13. MOBILE DESIGN
+   =============================== */
+
+@media (max-width: 550px) {
+
+  .purchase-area {
+    flex-direction: column;
+  }
+
+
+  .quantity-box {
+    width: 100%;
+  }
+
+
+  .thumb {
+    width: 70px;
+
+    height: 70px;
+  }
+
+}

@@ -1,0 +1,195 @@
+[14:25, 30/08/2026] Dav: <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sneakers Store</title>
+
+  <!-- Connecting our CSS file -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER SECTION
+       ========================= -->
+  <header class="header">
+
+    <!-- Website logo -->
+    <a href="#" class="logo">sneakers</a>
+
+    <!-- Navigation links -->
+    <nav class="nav">
+      <a href="#">Collections</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <!-- Cart and profile image -->
+    <div class="header-actions">
+
+      <button class="cart-icon" id="cartIcon">
+      
+        <!-- Cart number -->
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+
+      <img
+        src="images/avatar.jpg"
+        alt="User profile"
+        class="avatar"
+      />
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       MAIN PRODUCT SECTION
+       ========================= -->
+  <main class="product-page">
+
+    <!-- LEFT SIDE: PRODUCT IMAGES -->
+    <section class="gallery">
+
+      <!-- Main large image -->
+      <div class="main-image-box">
+       <img src="1.jpg" alt=""> 
+      </div>
+      
+
+
+      <!-- Small thumbnail images -->
+      <div class="thumbnails">
+
+        <button
+          class="thumb active"
+          data-image="images/shoe-main.jpg"
+        >
+          <img src="1775811634b0ff74bba2f8dfb4d2fb0051843ee273_thumbnail_750x999.webp" alt="">
+          />
+        </button>
+
+
+        <button
+          class="thumb"
+          data-image="images/thumb-2.jpg"
+        >
+          <img src="img2.jpg" alt="">
+        </button>
+
+
+        <button
+          class="thumb"
+          data-image="images/thumb-3.jpg"
+          >
+          <img src="largeimage.jpeg" alt="">
+        </button>
+
+
+        <button
+          class="thumb"
+          data-image="images/thumb-4.jpg"
+        >
+          <img src="166984_1643798659.jpg" alt="">
+        </button>
+
+      </div>
+    </section>
+
+
+    <!-- RIGHT SIDE: PRODUCT DETAILS -->
+    <section class="product-info">
+
+      <!-- Company name -->
+      <p class="company">
+        SNEAKER COMPANY
+      </p>
+
+
+      <!-- Product title -->
+      <h1>
+        Fall Limited Edition<br />
+        Sneakers
+      </h1>
+
+
+      <!-- Product description -->
+      <p class="description">
+        These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable rubber outer sole, they'll withstand everything
+        the weather can offer.
+      </p>
+
+
+      <!-- Price -->
+      <div class="price-row">
+
+        <span class="price">
+          $225.00
+        </span>
+
+        <span class="discount">
+          50%
+        </span>
+
+      </div>
+
+
+      <!-- Old price -->
+      <p class="old-price">
+        $350.00
+      </p>
+
+
+      <!-- Quantity and Add to Cart -->
+      <div class="purchase-area">
+
+        <!-- Quantity controls -->
+        <div class="quantity-box">
+
+          <button id="minus">
+            −
+          </button>
+
+          <span id="quantity">
+            0
+          </span>
+
+          <button id="plus">
+            +
+          </button>
+
+        </div>
+
+
+        <!-- Add to cart button -->
+        <button
+          class="add-cart-btn"
+          id="addToCart"
+        >
+          🛒 Add to cart
+        </button>
+
+      </div>
+
+
+      <!-- JavaScript message -->
+      <p
+        class="message"
+        id="message"
+      ></p>
+
+    </section>
+
+  </main>
+
+
+  <!-- Connecting JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
